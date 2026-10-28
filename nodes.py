@@ -444,8 +444,9 @@ class OllamaUnloadModels:
     CATEGORY = "Ollama"
 
     @classmethod
-    def IS_CHANGED(cls, **kwargs):
-        return float("nan")  # always run
+    def IS_CHANGED(cls, text="", unload=True, ollama_url=DEFAULT_URL):
+        # Return a deterministic hash of inputs so downstream CLIPTextEncode can cache its conditioning
+        return hashlib.sha1(f"{text}|{unload}|{ollama_url}".encode("utf-8")).hexdigest()
 
     def run(self, text, unload=True, ollama_url=DEFAULT_URL):
         if unload:
