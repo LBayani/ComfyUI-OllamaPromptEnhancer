@@ -37,3 +37,7 @@ git clone https://github.com/LBayani/ComfyUI-OllamaPromptEnhancer.git
 ```
 
 Restart ComfyUI. Make sure [Ollama](https://ollama.com/) is running (`http://127.0.0.1:11434`).
+
+## Example Workflows
+
+- [**LTX-2.5 22B Video-to-Video (IC-LoRA) + Ollama Prompt Enhancer + NVIDIA DLSS 5**](workflows/LTX2.5_Ollama_Optimized_Workflow.json) — Complete optimized workflow with automatic keyframe vision prompt enhancement, fast negative conditioning, streaming VAE, and 2K/4K DLSS 5 neural upscaling (includes embedded Russian guide and links to all required models, LoRAs, and runtimes).
